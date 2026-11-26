@@ -38,7 +38,7 @@ h2{font-size:clamp(2rem,5vw,3rem);line-height:1.15;letter-spacing:-.03em;margin-
 .diagram{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:360px;border:1px solid var(--line);border-radius:18px;background:radial-gradient(var(--line) 1px,var(--card) 1px) 0 0/18px 18px;font-family:'JetBrains Mono',monospace;font-size:.85rem}.diagram span{background:var(--bg);border:1px solid var(--accent);border-radius:10px;padding:10px;width:200px;text-align:center}.diagram i{transform:rotate(90deg);color:var(--accent);font-style:normal}
 .plinks{display:flex;gap:24px;margin-top:20px;color:var(--accent);font-weight:800}
 .layer{display:grid;grid-template-columns:48px 190px 1fr;gap:18px;align-items:center;margin-bottom:12px;padding:20px}.layer h3{font-size:1rem}.key{font:600 .72rem 'JetBrains Mono',monospace;color:var(--accent);text-align:center;border:1px solid var(--line);border-radius:8px;padding:8px 0}.learning{border-style:dashed}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid p:last-child{color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid h3+p{color:var(--muted)}.subhead{text-align:center;font-size:1.7rem;margin:56px 0 24px}.certs h3{font-size:1rem}.certs .card{overflow-wrap:anywhere}.verify{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:600;color:var(--accent)}
 .contact ul{list-style:none;margin-top:16px;border-top:1px solid var(--line)}.contact li{padding:12px 0 0;overflow-wrap:anywhere}.contact a:hover{color:var(--accent)}
 footer{display:flex;justify-content:space-between;gap:16px;padding:32px 0;font-size:.85rem;color:var(--muted)}
 .js .reveal{opacity:0;transform:translateY(20px);transition:.6s}.js .reveal.seen{opacity:1;transform:none}

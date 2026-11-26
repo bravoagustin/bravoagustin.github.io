@@ -61,14 +61,15 @@
   $$('main section[id]').forEach((s) => spy.observe(s));
 
   if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const words = ['Backend Java Developer', 'Spring Boot · Microservices', 'APIs REST · Spring Batch'];
-    let w = 0, c = words[0].length, dir = -1;
+    // Escribe y borra el título en el idioma activo.
+    let c = Infinity, dir = -1;
     const tick = () => {
-      c += dir;
-      $('#typed').textContent = words[w].slice(0, c);
+      const word = root.lang === 'en' ? 'Software Engineer' : 'Ingeniero de Software';
+      c = Math.max(0, Math.min(c, word.length) + dir);
+      $('#typed').textContent = word.slice(0, c);
       let wait = dir > 0 ? 70 : 35;
-      if (c === words[w].length) { dir = -1; wait = 2200; }
-      else if (c === 0) { dir = 1; w = (w + 1) % words.length; }
+      if (dir > 0 && c >= word.length) { dir = -1; wait = 2200; }
+      else if (c === 0) { dir = 1; wait = 400; }
       setTimeout(tick, wait);
     };
     setTimeout(tick, 2200);

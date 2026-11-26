@@ -8,3 +8,5 @@ Portfolio personal: HTML, CSS y JavaScript sin dependencias ni build.
 - `assets/`: CV en PDF (la página no lo enlaza).
 
 Para probarlo en local: `python3 -m http.server 8000`.
+
+Al cambiar `styles.css` o `app.js`, actualizá su `?v=` en `index.html` (primeros 8 caracteres de `sha1sum`) para evitar caché vieja.
